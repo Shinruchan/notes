@@ -1,0 +1,11 @@
+.toolbar {
+  background: var(--color-black-700);
+  box-shadow: var(--shadow-level-0);
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}

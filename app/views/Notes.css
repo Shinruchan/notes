@@ -1,0 +1,26 @@
+.notes {
+  display: flex;
+  height: 100%;
+}
+
+.notes > .titles {
+  background-color: var(--color-black-700);
+  width: 16rem;
+  box-shadow: var(--shadow-level-0);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.notes > .titles > div {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-black-500);
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.notes > .titles > div.selected {
+  background-color: var(--color-black-500);
+}
