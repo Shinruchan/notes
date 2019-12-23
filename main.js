@@ -1,12 +1,13 @@
 const { app, BrowserWindow, globalShortcut } = require('electron');
 
+
 function createWindow() {
   // Create the browser window.
   let win = new BrowserWindow({
     width: 800,
     height: 600,
     backgroundColor: '#141726',
-    icon: 'assets/notes.png',
+    icon: 'assets/icons/icon.png',
     webPreferences: {
       nodeIntegration: true
     }
@@ -17,10 +18,10 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  win.loadFile('dist/index.html');
+  win.loadFile('app-dist/index.html');
   win.removeMenu();
 
-  win.webContents.openDevTools();
+  if (!app.isPackaged) win.webContents.openDevTools();
 }
 
 app.on('ready', createWindow);

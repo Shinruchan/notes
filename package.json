@@ -1,16 +1,25 @@
 {
   "name": "notes",
+  "version": "0.0.1",
   "main": "main.js",
+  "author": {
+    "email": "yamialeks@gmail.com",
+    "name": "Shinru"
+  },
+  "homepage": "",
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
     "dev": "concurrently npm:dev:*",
-    "dev:app": "parcel --public-url './' app/index.html",
-    "dev:electron": "electron ."
+    "dev:app": "parcel --public-url './' -d app-dist app/index.html",
+    "dev:electron": "electron .",
+    "publish": "parcel build --public-url './' -d app-dist app/index.html && electron-builder"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "concurrently": "^5.0.2",
     "electron": "^7.1.6",
+    "electron-builder": "^21.2.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.4.1"
   },
@@ -32,5 +41,25 @@
   },
   "postcss": {
     "modules": true
+  },
+  "build": {
+    "appId": "shinru.notes",
+    "files": [
+      "app-dist/**/*",
+      "node_modules/**/*",
+      "assets/**/*",
+      "package.json",
+      "main.js"
+    ],
+    "directories": {
+      "output": "release-builds",
+      "buildResources": "assets"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
   }
 }

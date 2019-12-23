@@ -17,7 +17,7 @@ export const Notes = () => {
 
   useEffect(() => {
     window.addEventListener('keydown', ({ ctrlKey, keyCode }) => {
-      if (ctrlKey && keyCode === 78) newNote();
+      if (ctrlKey && [78, 84].includes(keyCode)) newNote();
     });
   }, []);
 
@@ -34,11 +34,13 @@ export const Notes = () => {
           </div>
         ))}
       </div>
-      <Editor
-        id={selectedNote.id}
-        content={selectedNote.body}
-        saveContent={data => saveNote(selectedNote.id, data)}
-      />
+      {(selectedNote && (
+        <Editor
+          id={selectedNote.id}
+          content={selectedNote.body}
+          saveContent={data => saveNote(selectedNote.id, data)}
+        />
+      )) || <p>To create note press Control + N</p>}
     </div>
   );
 };
