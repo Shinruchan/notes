@@ -28,13 +28,16 @@ import createUndoPlugin from 'draft-js-undo-plugin';
 import styles from './Editor.css';
 import 'draft-js/dist/Draft.css';
 import 'draft-js-linkify-plugin/lib/plugin.css';
-import 'draft-js-emoji-plugin/lib/plugin.css';
 import 'draft-js-static-toolbar-plugin/lib/plugin.css';
 import toolbarStyles from './toolbar.css';
 import buttonStyles from './button.css';
+import emojiStyles from './emoji.css';
 
 const linkifyPlugin = createLinkifyPlugin({ target: '_blank' });
-const emojiPlugin = createEmojiPlugin({ useNativeArt: true });
+const emojiPlugin = createEmojiPlugin({
+  useNativeArt: true,
+  theme: emojiStyles
+});
 const toolbarPlugin = createToolbarPlugin({
   theme: { buttonStyles, toolbarStyles }
 });
