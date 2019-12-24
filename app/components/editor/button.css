@@ -2,7 +2,8 @@
   display: inline-flex;
 }
 
-.button {
+.button,
+button {
   background: var(--color-black-700);
   color: var(--color-teal);
   border: none;
@@ -14,10 +15,17 @@
 }
 
 .button:hover,
-.button:focus {
+.button:focus,
+button:hover,
+button:focus {
   cursor: pointer;
   background: var(--color-black-700);
   outline: 0;
+}
+
+button:disabled {
+  color: var(--color-black-500);
+  cursor: not-allowed;
 }
 
 .active {
