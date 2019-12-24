@@ -14,6 +14,7 @@ export const Notes = () => {
   const selectNote = useAction(Actions.selectNote);
   const saveNote = useAction(Actions.saveNote);
   const newNote = useAction(Actions.newNote);
+  const removeNote = useAction(Actions.removeNote);
 
   useEffect(() => {
     window.addEventListener('keydown', ({ ctrlKey, keyCode }) => {
@@ -31,6 +32,8 @@ export const Notes = () => {
             onClick={() => selectNote(note.id)}
           >
             {note.title}
+
+            <span onClick={() => removeNote(note.id)}>✖</span>
           </div>
         ))}
       </div>
@@ -40,7 +43,11 @@ export const Notes = () => {
           content={selectedNote.body}
           saveContent={data => saveNote(selectedNote.id, data)}
         />
-      )) || <p>To create note press Control + N</p>}
+      )) || (
+        <p className={styles.empty}>
+          To create note press Ctrl + N or Ctrl + T
+        </p>
+      )}
     </div>
   );
 };

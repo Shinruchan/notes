@@ -26,8 +26,13 @@ export const newNote = state => ({
   ]
 });
 
+export const removeNote = (state, noteId) => ({
+  notes: state.notes.filter(note => note.id !== noteId)
+});
+
 export const Actions = {
   selectNote,
   saveNote,
-  newNote
+  newNote,
+  removeNote
 };

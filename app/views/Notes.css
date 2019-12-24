@@ -19,8 +19,29 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes > .titles > div > span {
+  display: none;
+  color: var(--color-pink);
+}
+
+.notes > .titles > div.selected:hover > span {
+  display: inline;
 }
 
 .notes > .titles > div.selected {
   background-color: var(--color-black-500);
+}
+
+.empty {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
