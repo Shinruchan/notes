@@ -7,7 +7,8 @@ export const selectNote = (state, noteId) => ({
 export const saveNote = (state, noteId, body) => {
   let title = body
     .substring(0, body.indexOf('\n'))
-    .replace(/<\/?[^>]+(>|$)/g, '');
+    .replace(/<\/?[^>]+(>|$)/g, '')
+    .replace(/&nbsp;/g, '');
 
   if (!title) title = '...';
 
