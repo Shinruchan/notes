@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useAction } from 'redux-zero/react';
+import { Settings } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 import { Editor } from '../components';
 
@@ -17,25 +19,36 @@ export const Notes = () => {
   const removeNote = useAction(Actions.removeNote);
 
   useEffect(() => {
-    window.addEventListener('keydown', ({ ctrlKey, keyCode }) => {
+    const handlePresses = ({ ctrlKey, keyCode }) => {
       if (ctrlKey && [78, 84].includes(keyCode)) newNote();
-    });
+    };
+
+    window.addEventListener('keydown', handlePresses);
+
+    return () => window.removeEventListener('keydown', handlePresses);
   }, []);
 
   return (
     <div className={styles.notes}>
-      <div className={styles.titles}>
-        {notes.map((note, i) => (
-          <div
-            key={i}
-            className={note.selected ? styles.selected : undefined}
-            onClick={() => selectNote(note.id)}
-          >
-            {note.title}
+      <div className={styles.sidebar}>
+        <div className={styles.titles}>
+          {notes.map((note, i) => (
+            <div
+              key={i}
+              className={note.selected ? styles.selected : undefined}
+              onClick={() => selectNote(note.id)}
+            >
+              {note.title}
 
-            <span onClick={() => removeNote(note.id)}>✖</span>
-          </div>
-        ))}
+              <span onClick={() => removeNote(note.id)}>✖</span>
+            </div>
+          ))}
+        </div>
+        <div className={styles.settings}>
+          <Link to="settings">
+            <Settings />
+          </Link>
+        </div>
       </div>
       {(selectedNote && (
         <Editor

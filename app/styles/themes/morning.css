@@ -31,5 +31,8 @@
   --color-editor-emoji-bg: var(--color-orange-100);
   --color-editor-emoji-highlight: var(--color-orange-500);
 
+  /* settings */
+  --color-settings-selected: var(--color-orange-500);
+
   --shadow-level-0: 1px 1px 4px -2px #000;
 }

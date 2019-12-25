@@ -1,24 +1,32 @@
-const saveToLocalstorage = (key, data) => {
-  return new Promise((resolve, reject) => {
-    localStorage.setItem(key, JSON.stringify(data), err =>
-      err ? reject(err) : resolve(state)
-    );
+const saveToLocalStorage = (keys, store) => {
+  return new Promise(resolve => {
+    keys.forEach(key => {
+      localStorage.setItem(`store-${key}`, JSON.stringify(store[key]));
+    });
+
+    resolve();
   });
 };
 
-export const persistMiddleware = store => (next, args) => action => {
-  const r = next(action);
+export const persistMiddleware = (keys, initialState) => {
+  keys.forEach(key => {
+    const data = JSON.parse(localStorage.getItem(`store-${key}`));
+    if (data) initialState[key] = data;
+  });
 
-  if (r && typeof r.then === 'function') {
-    return next(action).then(d => {
-      return saveToLocalstorage(
-        'store-notes',
-        store.getState().notes
-      ).then(() => Promise.resolve(d));
-    });
-  }
+  return store => (next, args) => action => {
+    const r = next(action);
 
-  return saveToLocalstorage('store-notes', store.getState().notes).then(() =>
-    Promise.resolve(r)
-  );
+    if (r && typeof r.then === 'function') {
+      return next(action).then(d => {
+        return saveToLocalStorage(keys, store.getState()).then(() =>
+          Promise.resolve(d)
+        );
+      });
+    }
+
+    return saveToLocalStorage(keys, store.getState()).then(() =>
+      Promise.resolve(r)
+    );
+  };
 };

@@ -30,9 +30,16 @@ export const removeNote = (state, noteId) => ({
   notes: state.notes.filter(note => note.id !== noteId)
 });
 
+export const changeTheme = (state, theme) => {
+  document.documentElement.setAttribute('theme', theme);
+
+  return { theme };
+};
+
 export const Actions = {
   selectNote,
   saveNote,
   newNote,
-  removeNote
+  removeNote,
+  changeTheme
 };

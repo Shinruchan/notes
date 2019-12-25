@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 1rem;
+}
+
+.close {
+  display: block;
+  margin-left: auto;
+  width: fit-content;
+}
+
+.themeLine {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.themeLine.selected {
+  background: var(--color-settings-selected);
+  border-radius: 5px;
+}
+
+.themeLine p {
+  margin-right: 1rem;
+}
