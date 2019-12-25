@@ -50,8 +50,8 @@
   "build": {
     "appId": "shinru.notes",
     "files": [
+      "!node_modules",
       "app-dist/**/*",
-      "node_modules/**/*",
       "assets/**/*",
       "package.json",
       "main.js"
