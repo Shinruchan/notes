@@ -65,6 +65,10 @@
         "AppImage",
         "deb"
       ]
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "darkModeSupport": true
     }
   }
 }
