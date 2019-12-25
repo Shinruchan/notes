@@ -4,7 +4,7 @@
 }
 
 .notes > .titles {
-  background-color: var(--color-black-700);
+  background-color: var(--color-bg-sidebar);
   width: 16rem;
   box-shadow: var(--shadow-level-0);
   overflow: hidden;
@@ -13,7 +13,7 @@
 
 .notes > .titles > div {
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid var(--color-black-500);
+  border-bottom: 1px solid var(--color-sidebar-highlight);
   user-select: none;
   cursor: pointer;
   white-space: nowrap;
@@ -26,7 +26,7 @@
 
 .notes > .titles > div > span {
   display: none;
-  color: var(--color-pink);
+  color: var(--color-delete);
 }
 
 .notes > .titles > div.selected:hover > span {
@@ -34,7 +34,7 @@
 }
 
 .notes > .titles > div.selected {
-  background-color: var(--color-black-500);
+  background-color: var(--color-sidebar-highlight);
 }
 
 .empty {
