@@ -1,0 +1,35 @@
+:root,
+:root[theme='morning'],
+[theme='morning'] {
+  /* color variables */
+  --color-blue-900: #1c4d8c;
+  --color-blue-700: #15326a;
+  --color-blue-500: #214da6;
+
+  --color-orange-100: #fdf6e7;
+  --color-orange-500: #f29d52;
+
+  /* global */
+  --color-text: var(--color-blue-900);
+
+  /* layout */
+  --color-bg-main: var(--color-orange-100);
+  --color-scrollbar: var(--color-blue-700);
+  --color-scrollbar-highlight: var(--color-blue-500);
+
+  /* sidebar */
+  --color-bg-sidebar: var(--color-blue-500);
+  --color-sidebar-highlight: var(--color-blue-700);
+  --color-text-sidebar: var(--color-orange-100);
+  --color-delete: var(--color-orange-500);
+
+  /* editor */
+  --color-editor-toolbar-bg: var(--color-blue-500);
+  --color-editor-toolbar-button: var(--color-orange-100);
+  --color-editor-toolbar-button-disabled: var(--color-blue-700);
+  --color-editor-toolbar-button-active: var(--color-orange-500);
+  --color-editor-emoji-bg: var(--color-orange-100);
+  --color-editor-emoji-highlight: var(--color-orange-500);
+
+  --shadow-level-0: 1px 1px 4px -2px #000;
+}

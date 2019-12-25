@@ -5,6 +5,7 @@
 
 .notes > .titles {
   background-color: var(--color-bg-sidebar);
+  color: var(--color-text-sidebar);
   width: 16rem;
   box-shadow: var(--shadow-level-0);
   overflow: hidden;
