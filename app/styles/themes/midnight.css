@@ -1,7 +1,8 @@
 :root,
-:root[theme='midnight'] {
+:root[theme='midnight'],
+[theme='midnight'] {
   /* color variables */
-  --color-pure-black: black;
+  --color-pure-black: #000000;
   --color-black-900: #141726;
   --color-black-700: #1e2239;
   --color-black-500: #2a3050;
@@ -17,17 +18,18 @@
 
   /* layout */
   --color-bg-main: var(--color-black-900);
-  --color-bg-sidebar: var(--color-black-700);
   --color-scrollbar: var(--color-black-500);
   --color-scrollbar-highlight: var(--color-blue);
 
   /* sidebar */
+  --color-bg-sidebar: var(--color-black-700);
   --color-sidebar-highlight: var(--color-black-500);
+  --color-text-sidebar: var(--color-text);
   --color-delete: var(--color-pink);
 
   /* editor */
   --color-editor-toolbar-bg: var(--color-black-700);
-  --color-editor-toolbar-button: var(--color-black-700);
+  --color-editor-toolbar-button: var(--color-text);
   --color-editor-toolbar-button-disabled: var(--color-black-500);
   --color-editor-toolbar-button-active: var(--color-purple);
   --color-editor-emoji-bg: var(--color-black-700);

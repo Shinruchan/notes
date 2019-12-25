@@ -4,14 +4,14 @@
 
 .button,
 button {
-  background: var(--color-editor-toolbar-button);
-  color: var(--color-text);
+  background: none;
+  color: var(--color-editor-toolbar-button);
   border: none;
   font-size: 1rem;
 }
 
 .button svg {
-  fill: var(--color-text);
+  fill: var(--color-editor-toolbar-button);
 }
 
 .button:hover,
@@ -19,7 +19,7 @@ button {
 button:hover,
 button:focus {
   cursor: pointer;
-  background: var(--color-editor-toolbar-button);
+  background: none;
   outline: 0;
 }
 
