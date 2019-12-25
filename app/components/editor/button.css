@@ -4,14 +4,14 @@
 
 .button,
 button {
-  background: var(--color-black-700);
-  color: var(--color-teal);
+  background: var(--color-editor-toolbar-button);
+  color: var(--color-text);
   border: none;
   font-size: 1rem;
 }
 
 .button svg {
-  fill: var(--color-teal);
+  fill: var(--color-text);
 }
 
 .button:hover,
@@ -19,19 +19,19 @@ button {
 button:hover,
 button:focus {
   cursor: pointer;
-  background: var(--color-black-700);
+  background: var(--color-editor-toolbar-button);
   outline: 0;
 }
 
 button:disabled {
-  color: var(--color-black-500);
+  color: var(--color-editor-toolbar-button-disabled);
   cursor: not-allowed;
 }
 
 .active {
-  color: var(--color-purple);
+  color: var(--color-editor-toolbar-button-active);
 }
 
 .active svg {
-  fill: var(--color-purple);
+  fill: var(--color-editor-toolbar-button-active);
 }

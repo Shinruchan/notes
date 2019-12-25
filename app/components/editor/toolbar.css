@@ -1,5 +1,5 @@
 .toolbar {
-  background: var(--color-black-700);
+  background: var(--color-editor-toolbar-bg);
   box-shadow: var(--shadow-level-0);
   z-index: 2;
   box-sizing: border-box;

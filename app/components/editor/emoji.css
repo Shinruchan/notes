@@ -2,7 +2,7 @@
   margin-top: 1.75em;
   position: absolute;
   max-width: 440px;
-  background: var(--color-black-700);
+  background: var(--color-editor-emoji-bg);
   box-shadow: var(--shadow-level-0);
   cursor: pointer;
   padding-top: 8px;
@@ -19,10 +19,10 @@
 }
 
 .emojiSuggestionsEntry:active {
-  background-color: var(--color-black-500);
+  background-color: var(--color-editor-emoji-highlight);
 }
 
 .emojiSuggestionsEntryFocused {
   padding: .5em;
-  background-color: var(--color-black-500);
+  background-color: var(--color-editor-emoji-highlight);
 }
