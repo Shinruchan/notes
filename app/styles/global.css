@@ -6,6 +6,11 @@ body {
   font-size: 16px;
 }
 
+/* Links */
+a {
+  color: var(--color-text);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 0.5rem;

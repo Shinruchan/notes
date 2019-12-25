@@ -1,0 +1,19 @@
+.bg {
+  background: var(--color-bg-main);
+  color: var(--color-text);
+  width: 8rem;
+  height: 5rem;
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.sidebar {
+  display: inline-block;
+  background: var(--color-bg-sidebar);
+  color: var(--color-text-sidebar);
+  height: 100%;
+  width: 2rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+}
