@@ -4,7 +4,7 @@ import { persistMiddleware } from './persist.middleware';
 
 const INITIAL_STATE = {
   notes: [],
-  themes: ['midnight', 'morning'],
+  themes: ['midnight', 'morning', 'cyberpunk'],
   theme: 'midnight'
 };
 
