@@ -1,0 +1,39 @@
+:root,
+:root[theme='office'],
+[theme='office'] {
+  /* color variables */
+  --color-white: #fff;
+  --color-black: #4d515a;
+
+  --color-grey-100: #f4f5f7;
+  --color-grey-300: #eaecf0;
+
+  --color-red: #ea5d5d;
+
+  /* global */
+  --color-text: var(--color-black);
+
+  /* layout */
+  --color-bg-main: var(--color-white);
+  --color-scrollbar: var(--color-black);
+  --color-scrollbar-highlight: var(--color-red);
+
+  /* sidebar */
+  --color-bg-sidebar: var(--color-grey-100);
+  --color-sidebar-highlight: var(--color-grey-300);
+  --color-text-sidebar: var(--color-black);
+  --color-delete: var(--color-red);
+
+  /* editor */
+  --color-editor-toolbar-bg: var(--color-grey-100);
+  --color-editor-toolbar-button: var(--color-black);
+  --color-editor-toolbar-button-disabled: var(--color-grey-300);
+  --color-editor-toolbar-button-active: var(--color-red);
+  --color-editor-emoji-bg: var(--color-grey-100);
+  --color-editor-emoji-highlight: var(--color-grey-300);
+
+  /* settings */
+  --color-settings-selected: var(--color-grey-300);
+
+  --shadow-level-0: none;
+}
