@@ -33,7 +33,7 @@ export const Settings = () => {
           key={i}
           onClick={() => changeTheme(theme)}
         >
-          <p>{theme.charAt(0).toUpperCase() + theme.slice(1)}</p>{' '}
+          <p>{theme.charAt(0).toUpperCase() + theme.slice(1)}</p>
           <ThemeSample theme={theme} />
         </div>
       ))}

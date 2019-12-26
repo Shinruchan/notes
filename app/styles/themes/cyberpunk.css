@@ -1,0 +1,41 @@
+:root,
+:root[theme='cyberpunk'],
+[theme='cyberpunk'] {
+  /* color variables */
+  --color-black: #100d23;
+
+  --color-purple-900: #261d45;
+  --color-purple-700: #372963;
+  --color-purple-500: #503c90;
+  --color-purple-300: #c592ff;
+
+  --color-green: #00ff9c;
+  --color-red: #ff4081;
+
+  /* global */
+  --color-text: var(--color-green);
+
+  /* layout */
+  --color-bg-main: var(--color-purple-900);
+  --color-scrollbar: var(--color-purple-700);
+  --color-scrollbar-highlight: var(--color-purple-500);
+
+  /* sidebar */
+  --color-bg-sidebar: var(--color-purple-700);
+  --color-sidebar-highlight: var(--color-purple-500);
+  --color-text-sidebar: var(--color-green);
+  --color-delete: var(--color-red);
+
+  /* editor */
+  --color-editor-toolbar-bg: var(--color-purple-700);
+  --color-editor-toolbar-button: var(--color-green);
+  --color-editor-toolbar-button-disabled: var(--color-purple-500);
+  --color-editor-toolbar-button-active: var(--color-red);
+  --color-editor-emoji-bg: var(--color-purple-700);
+  --color-editor-emoji-highlight: var(--color-purple-500);
+
+  /* settings */
+  --color-settings-selected: var(--color-purple-700);
+
+  --shadow-level-0: 1px 1px 4px -2px var(--color-black);
+}
